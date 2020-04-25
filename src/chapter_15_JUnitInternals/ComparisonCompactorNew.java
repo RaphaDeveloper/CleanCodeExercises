@@ -3,16 +3,11 @@ package chapter_15_JUnitInternals;
 import junit.framework.Assert;
 
 public class ComparisonCompactorNew {
-
-    private static final String ELLIPSIS = "...";
-    private static final String DELTA_END = "]";
-    private static final String DELTA_START = "[";
-
     private int contextLength;
     private String expected;
     private String actual;
-    private int prefix;
-    private int suffix;
+    private int commonPrefix;
+    private int commonSuffix;
 
     public ComparisonCompactorNew(int contextLength,
                                   String expected,
@@ -23,60 +18,95 @@ public class ComparisonCompactorNew {
     }
 
     public String compact(String message) {
-        if (expected == null || actual == null || areStringsEqual())
+        if (!shouldCompact())
             return Assert.format(message, expected, actual);
 
-        findCommonPrefix();
-        findCommonSuffix();
-        String expected = compactString(this.expected);
-        String actual = compactString(this.actual);
-        return Assert.format(message, expected, actual);
+        return computeCompactation(message);
     }
 
-    private String compactString(String source) {
-        String result = DELTA_START +
-                source.substring(prefix, source.length() - suffix + 1) + DELTA_END;
-        if (prefix > 0)
-            result = computeCommonPrefix() + result;
-        if (suffix > 0)
-            result = result + computeCommonSuffix();
-        return result;
+    private boolean shouldCompact() {
+        return expected != null && actual != null && !expected.equals(actual);
     }
-    private void findCommonPrefix() {
-        prefix = 0;
+
+    private String computeCompactation(String message)
+    {
+        defineCommonPrefix();
+        defineCommonSuffix();
+
+        return Assert.format(message, computeResult(expected), computeResult(actual));
+    }
+
+    private void defineCommonPrefix() {
         int end = Math.min(expected.length(), actual.length());
-        for (; prefix < end; prefix++) {
-            if (expected.charAt(prefix) != actual.charAt(prefix))
+
+        for (commonPrefix = 0; commonPrefix < end; commonPrefix++) {
+            if (expected.charAt(commonPrefix) != actual.charAt(commonPrefix))
                 break;
         }
     }
 
-    private void findCommonSuffix() {
+    private void defineCommonSuffix() {
         int expectedSuffix = expected.length() - 1;
         int actualSuffix = actual.length() - 1;
-        for (;
-             actualSuffix >= prefix && expectedSuffix >= prefix;
-             actualSuffix--, expectedSuffix--) {
+
+        for (; actualSuffix >= commonPrefix && expectedSuffix >= commonPrefix; actualSuffix--, expectedSuffix--) {
             if (expected.charAt(expectedSuffix) != actual.charAt(actualSuffix))
                 break;
         }
-        suffix = expected.length() - expectedSuffix;
+
+        commonSuffix = expected.length() - expectedSuffix;
+    }
+
+    private String computeResult(String source) {
+        return computeCommonPrefix() + computeDifference(source) + computeCommonSuffix();
     }
 
     private String computeCommonPrefix() {
-        return (prefix > contextLength ? ELLIPSIS : "") +
-                expected.substring(Math.max(0, prefix - contextLength),
-                        prefix);
+        String commonPrefix = getCommonPrefix();
+
+        if (anyPrefixCharacterIsNotVisible())
+            commonPrefix = "..." + commonPrefix;
+
+        return commonPrefix;
     }
+
+    private String getCommonPrefix() {
+        int start = Math.max(commonPrefix - contextLength, 0);
+
+        return expected.substring(start, commonPrefix);
+    }
+
+    private boolean anyPrefixCharacterIsNotVisible() {
+        return commonPrefix > contextLength;
+    }
+
+    private String computeDifference(String source) {
+        int countOfCharactersBeforeSuffix = getCountOfCharactersBeforeSuffix(source);
+
+        return "[" + source.substring(commonPrefix, countOfCharactersBeforeSuffix) + "]";
+    }
+
     private String computeCommonSuffix() {
-        int end = Math.min(expected.length() - suffix + 1 + contextLength,
-                expected.length());
-        return expected.substring(expected.length() - suffix + 1, end) +
-                (expected.length() - suffix + 1 < expected.length() - contextLength ? ELLIPSIS : "");
+        String commonSuffix = getCommonSuffix();
 
+        if (anySuffixCharacterIsNotVisible())
+            commonSuffix += "...";
+
+        return commonSuffix;
     }
 
-    private boolean areStringsEqual() {
-        return expected.equals(actual);
+    private String getCommonSuffix() {
+        int countOfCharactersBeforeSuffix = getCountOfCharactersBeforeSuffix(expected);
+        int end = Math.min(countOfCharactersBeforeSuffix + contextLength, expected.length());
+
+        return expected.substring(countOfCharactersBeforeSuffix, end);
+    }
+
+    private boolean anySuffixCharacterIsNotVisible() {
+        return getCountOfCharactersBeforeSuffix(expected) < expected.length() - contextLength;
+    }
+
+    private int getCountOfCharactersBeforeSuffix(String source) {
+        return source.length() - commonSuffix + 1;
     }
 }

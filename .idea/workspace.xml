@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e4635a8-eefb-433e-a6c6-8c484775cf99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chapter_15_JUnitInternals/ComparisonCompactorNew.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/chapter_15_JUnitInternals/ComparisonCompactorNewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Raphael_Silva.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter_15_JUnitInternals/ComparisonCompactorNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter_15_JUnitInternals/ComparisonCompactorNew.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -80,16 +81,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ComparisonCompactorNewTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="CleanCodeExercises" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ComparisonCompactorNewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeExercises" />
       <extension name="coverage">
@@ -105,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComparisonCompactorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComparisonCompactorNewTest.testComparisonErrorEndSameCompleteContext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeExercises" />
       <extension name="coverage">
         <pattern>
@@ -114,21 +105,75 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="chapter_15_JUnitInternals" />
-      <option name="MAIN_CLASS_NAME" value="chapter_15_JUnitInternals.ComparisonCompactorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="chapter_15_JUnitInternals.ComparisonCompactorNewTest" />
+      <option name="METHOD_NAME" value="testComparisonErrorEndSameCompleteContext" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeExercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter_15_JUnitInternals.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter_15_JUnitInternals" />
+      <option name="MAIN_CLASS_NAME" value="chapter_15_JUnitInternals.ComparisonCompactorNewTest" />
+      <option name="METHOD_NAME" value="testComparisonErrorOverlapingMatches" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeExercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter_15_JUnitInternals.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter_15_JUnitInternals" />
+      <option name="MAIN_CLASS_NAME" value="chapter_15_JUnitInternals.ComparisonCompactorNewTest" />
+      <option name="METHOD_NAME" value="testComparisonErrorOverlapingMatches2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches2222" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeExercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter_15_JUnitInternals.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chapter_15_JUnitInternals" />
+      <option name="MAIN_CLASS_NAME" value="chapter_15_JUnitInternals.ComparisonCompactorNewTest" />
+      <option name="METHOD_NAME" value="testComparisonErrorOverlapingMatches2222" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.ComparisonCompactorTest" />
+      <item itemvalue="JUnit.ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches2" />
+      <item itemvalue="JUnit.ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches2222" />
+      <item itemvalue="JUnit.ComparisonCompactorNewTest.testComparisonErrorEndSameCompleteContext" />
+      <item itemvalue="JUnit.ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches" />
       <item itemvalue="JUnit.ComparisonCompactorNewTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ComparisonCompactorNewTest" />
-        <item itemvalue="JUnit.ComparisonCompactorTest" />
+        <item itemvalue="JUnit.ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches" />
+        <item itemvalue="JUnit.ComparisonCompactorNewTest.testComparisonErrorEndSameCompleteContext" />
+        <item itemvalue="JUnit.ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches2222" />
+        <item itemvalue="JUnit.ComparisonCompactorNewTest.testComparisonErrorOverlapingMatches2" />
       </list>
     </recent_temporary>
   </component>
@@ -162,24 +207,64 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="281" key="GridCell.Tab.0.bottom" timestamp="1587608703724">
+    <state x="1035" y="222" key="#xdebugger.evaluate" timestamp="1587782008430">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1587608703724" />
-    <state width="2517" height="281" key="GridCell.Tab.0.center" timestamp="1587608703724">
+    <state x="1035" y="222" key="#xdebugger.evaluate/0.0.2560.1040@0.0.2560.1040" timestamp="1587782008430" />
+    <state width="2517" height="281" key="GridCell.Tab.0.bottom" timestamp="1587790447773">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1587608703724" />
-    <state width="2517" height="281" key="GridCell.Tab.0.left" timestamp="1587608703724">
+    <state width="2517" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1587790447773" />
+    <state width="2517" height="281" key="GridCell.Tab.0.center" timestamp="1587790447773">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1587608703724" />
-    <state width="2517" height="281" key="GridCell.Tab.0.right" timestamp="1587608703724">
+    <state width="2517" height="281" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1587790447773" />
+    <state width="2517" height="281" key="GridCell.Tab.0.left" timestamp="1587790447773">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1587608703724" />
+    <state width="2517" height="281" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1587790447773" />
+    <state width="2517" height="281" key="GridCell.Tab.0.right" timestamp="1587790447773">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="281" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1587790447773" />
+    <state width="2517" height="348" key="GridCell.Tab.1.bottom" timestamp="1587786632375">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="348" key="GridCell.Tab.1.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1587786632375" />
+    <state width="2517" height="348" key="GridCell.Tab.1.center" timestamp="1587786632375">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="348" key="GridCell.Tab.1.center/0.0.2560.1040@0.0.2560.1040" timestamp="1587786632375" />
+    <state width="2517" height="348" key="GridCell.Tab.1.left" timestamp="1587786632375">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="348" key="GridCell.Tab.1.left/0.0.2560.1040@0.0.2560.1040" timestamp="1587786632375" />
+    <state width="2517" height="348" key="GridCell.Tab.1.right" timestamp="1587786632375">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2517" height="348" key="GridCell.Tab.1.right/0.0.2560.1040@0.0.2560.1040" timestamp="1587786632375" />
+    <state x="860" y="262" key="IDE.errors.dialog" timestamp="1587779427386">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="860" y="262" key="IDE.errors.dialog/0.0.2560.1040@0.0.2560.1040" timestamp="1587779427386" />
+    <state x="1010" y="284" key="extract.method.dialog" timestamp="1587789741692">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1010" y="284" key="extract.method.dialog/0.0.2560.1040@0.0.2560.1040" timestamp="1587789741692" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/chapter_15_JUnitInternals/ComparisonCompactorNewTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>
